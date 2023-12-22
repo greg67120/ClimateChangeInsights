@@ -94,7 +94,6 @@ MANIFEST
 /backend/climate_insights_backend/*.pyc
 /backend/climate_insights_backend/__pycache__
 /backend/climate_insights_backend/db.sqlite3
-/backend/climate_insights_backend/media/
 /backend/climate_insights_backend/local_settings.py
 /backend/climate_insights_backend/static/
 /backend/climate_insights_backend/media/

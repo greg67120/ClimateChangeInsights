@@ -105,6 +105,19 @@ MANIFEST
 /backend/climate_insights_backend/db.sqlite3-journal
 /backend/climate_insights_backend/secret_key.txt
 
+# Ignore Django-specific files and folders
+/backend/db.sqlite3
+/backend/__pycache__/
+/backend/*.pyc
+/backend/migrations/
+
+# Ignore Node.js specific files (for React frontend)
+/frontend/node_modules/
+/frontend/.npm/
+/frontend/.yarn/
+/frontend/yarn-error.log
+
+
 # --- Flask ---
 instance/
 .webassets-cache

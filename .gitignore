@@ -194,3 +194,7 @@ cython_debug/
 
 # --- Python Virtualenv ---
 ClimateChangeInsights_dev_py3121
+
+/logging/
+/security/
+

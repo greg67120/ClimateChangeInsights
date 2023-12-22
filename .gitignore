@@ -133,16 +133,16 @@ celerybeat-schedule
 celerybeat.pid
 
 # --- Frontend ---
-/frontend/climate_insights_frontend/node_modules/
-/frontend/climate_insights_frontend/build/
-/frontend/climate_insights_frontend/dist/
-/frontend/climate_insights_frontend/.env.local
-/frontend/climate_insights_frontend/.env.development.local
-/frontend/climate_insights_frontend/.env.test.local
-/frontend/climate_insights_frontend/.env.production.local
-/frontend/climate_insights_frontend/npm-debug.log
-/frontend/climate_insights_frontend/yarn-error.log
-/frontend/climate_insights_frontend/coverage
+/frontend/node_modules/
+/frontend/build/
+/frontend/dist/
+/frontend/.env.local
+/frontend/.env.development.local
+/frontend/.env.test.local
+/frontend/.env.production.local
+/frontend/npm-debug.log
+/frontend/yarn-error.log
+/frontend//coverage
 /frontend/logging/logs
 /frontend/logging/*.log
 

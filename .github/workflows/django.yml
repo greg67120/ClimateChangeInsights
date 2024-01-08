@@ -1,0 +1,39 @@
+name: Django CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:8.2.0
+        env:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: test_db
+        ports:
+          - 3306:3306
+        options: --health-cmd='mysqladmin ping' --health-interval=10s --health-timeout=5s --health-retries=3
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.12.1
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.12.1'
+    - name: Install dependencies
+      run: |
+        pip install -r backend/requirements.txt
+    - name: Run migrations
+      run: |
+        python backend/manage.py migrate --settings=climate_insights_backend.settings
+    - name: Run tests
+      run: |
+        python backend/manage.py test --settings=climate_insights_backend.settings
+
